@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Handson 6</title>
+</head>
+<body>
+    <h1 style="text-align: center;">Js Handson 6</h1>
+    <h3><strong>Q1</strong>Find the Smaller Angle.</h3>
+    <p><strong>Ans</strong>
+    <pre>
+        var Minimal_Angle = (h, m) => 
+{
+  let angle = Math.abs((30 * h) - (11 / 2) * m);
+          if (angle > 180) {
+            angle = 360 - angle;
+          }
+          return angle;      
+};</pre>
+    </p>
+    <h3><strong>Q2</strong>Check whether the year is Leap year or not..</h3>
+    <p><strong>Ans</strong>
+    <pre>
+        var Check_Leap = (year) => 
+        {
+         if (year % 4 === 0 && (year % 100 !== 0 || year % 400 === 0)) {
+                    return("Leap Year");
+                } else {
+                    return( "Non Leap Year");
+                }
+          
+        
+        };
+         </pre>
+    </p>
+    <h3><strong>Q3 </strong>Perfect Number Check</h3>
+    <p><strong>Ans</strong>
+    <pre>
+        var Perfect_Check = (N) => 
+        {
+          let sum = 0;
+                  for (let i = 1; i < (N/2); i++) {
+                    if (N % i === 0) {
+                      sum += i;
+                    }
+                  }
+                  if(sum === N){
+                    return 'YES';
+                  }
+                else{
+                  return 'NO';
+                }
+        };
+        </pre>
+    </p>
+    <h3><strong>Q4</strong>Reverse a Number.</h3>
+    <p><strong>Ans</strong>
+    <pre>
+  
+var Reverse_Number = (N) => 
+{
+   let rev = 0;
+
+        while (N > 0) {
+        let rem = N % 10;
+         rev = rev * 10 + rem;
+        N = Math.floor(N / 10);
+    }
+        return rev;
+
+};
+ </pre>
+    </p>
+    <h3><strong>Q5 </strong>Substring Check.</h3>
+    <p><strong>Ans</strong>
+    <pre>
+
+        var Substring_Check = (S1, S2) => 
+        {
+           if (S1.indexOf(S2) >=0 ) {
+                    return "YES";
+                } else {
+                    return "NO";
+                }  
+        };
+    </pre>
+    </p>
+</body>
+</html>
